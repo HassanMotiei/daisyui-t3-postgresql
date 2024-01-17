@@ -1,5 +1,5 @@
 import "~/styles/globals.css";
-import Navbar from "~/components/Navbar"
+import Navbar from "~/components/Navbar";
 
 import { Inter } from "next/font/google";
 
@@ -25,9 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans ${inter.variable}`}>
         <TRPCReactProvider>
-          <Navbar/>
-          {children}
-          </TRPCReactProvider>
+          <Navbar />
+          <div className="container h-full pt-12">{children}</div>
+        </TRPCReactProvider>
       </body>
     </html>
   );

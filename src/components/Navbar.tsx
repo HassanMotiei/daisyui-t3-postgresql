@@ -1,3 +1,4 @@
+import { BookOpenCheck } from "lucide-react";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -5,12 +6,14 @@ const Navbar = () => {
     <div className="navbar bg-base-100">
       <div className="container navbar">
         <div className="navbar-start">
-          <Link href="/">Icon</Link>
+          <Link href="/">
+            <BookOpenCheck color="blue"/>
+          </Link>
         </div>
         <div className="navbar-center"></div>
         <div className="navbar-end">
-          <Link href="/create-post" className="btn btn-ghost">
-            Create Post
+          <Link href="/create-page" className="btn btn-ghost">
+            Create Page
           </Link>
           <button className="btn btn-circle btn-ghost">
             <svg
