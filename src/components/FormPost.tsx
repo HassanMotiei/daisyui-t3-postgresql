@@ -6,9 +6,10 @@ import { type formInputPost } from "~/types";
 
 interface formPostProps {
   submit: SubmitHandler<formInputPost>;
+  isEditing: boolean;
 }
 
-const FormPost: FC<formPostProps> = ({ submit }) => {
+const FormPost: FC<formPostProps> = ({ submit, isEditing }) => {
   const { register, handleSubmit } = useForm<formInputPost>();
 
   return (
@@ -30,9 +31,9 @@ const FormPost: FC<formPostProps> = ({ submit }) => {
       <select
         className="select select-bordered w-full max-w-lg"
         {...(register("tag"), { required: true })}
-        defaultValue={''}
+        defaultValue={""}
       >
-        <option disabled value=''>
+        <option disabled value="">
           Select tags
         </option>
         <option>JavaScript</option>
@@ -43,7 +44,7 @@ const FormPost: FC<formPostProps> = ({ submit }) => {
         className="btn btn-primary w-full max-w-lg text-white"
         type="submit"
       >
-        CREATE
+        {isEditing ? "Update" : "Create"}
       </button>
     </form>
   );

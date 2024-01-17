@@ -3,7 +3,7 @@ import { Pencil, Trash2 } from "lucide-react";
 const ButtonAction = () => {
   return (
     <div>
-      <Link href="/edit/id" className="btn mr-2">
+      <Link href="/edit/1" className="btn mr-2">
         <Pencil /> Edit
       </Link>
       <button className="btn btn-error">
